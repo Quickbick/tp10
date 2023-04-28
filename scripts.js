@@ -16,7 +16,10 @@ document.addEventListener("DOMContentLoaded", function(){
             document.querySelector("#location span").innerHTML = response.location.name +" " + response.location.region;
             document.querySelector("#tempF span").innerHTML = response.current.temp_f;
             document.querySelector("#tempC span").innerHTML = response.current.temp_c;
-            document.querySelector("#direction span").innerHTML = response.current.wind_dir;
+            document.querySelector("#direction").innerHTML = response.current.wind_dir;
+            document.querySelector("#speed").innerHTML = response.current.wind_mph;
+            document.querySelector("#cloud span").innerHTML = response.current.cloud;
+            document.querySelector("#humidity span").innerHTML = response.current.humidity;
             
             return response;
         })
